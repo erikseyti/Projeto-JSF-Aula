@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>principal</h1>
+	<a href="primeiroExemplo">primeiro servlet</a><br>
+	<a href="controle1?num=50">enviando get para o controle1 via url</a><br>
+	<a href="nomes.jsp">regisro nomes</a><br>
+
+	<h1>enviando get via formulário</h1>
+	<form method="get" action="controle1">
+		<input type="text" name="numero">
+		<button>enviar</button>
+	</form>
+	
+	<h1>enviando post via formulário</h1>
+	<form method="post" action="controle1">
+		<input type="text" name="numero">
+		<button>enviar</button>
+	</form>
+</body>
+</html>
