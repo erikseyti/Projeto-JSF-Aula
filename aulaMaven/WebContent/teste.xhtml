@@ -6,6 +6,7 @@
 
 <h:head></h:head> 
 <body> 
+	<h1>#{beanTeste.empresa.nome}</h1>
 	<h:form>
 		<h:inputText value="#{beanTeste.valor}" />
 		<h:commandButton action="#{beanTeste.salvar()}" value="enviar" />

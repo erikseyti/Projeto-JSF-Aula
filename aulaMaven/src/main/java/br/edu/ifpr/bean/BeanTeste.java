@@ -5,17 +5,31 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.enterprise.context.RequestScoped;
+import javax.enterprise.context.SessionScoped;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+
+import javax.inject.Inject;
 import javax.inject.Named;
+import br.edu.ifpr.entidades.Empresa;
 
 @Named
-@javax.enterprise.context.SessionScoped
+@SessionScoped
 public class BeanTeste implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	private String valor;
 	private List<String> nomes = new ArrayList<String>();
+	
+	@Inject
+	private Empresa empresa;
+
+	public Empresa getEmpresa() {
+		return empresa;
+	}
+
+	public void setEmpresa(Empresa empresa) {
+		this.empresa = empresa;
+	}
 
 	public String getValor() {
 		return valor;
