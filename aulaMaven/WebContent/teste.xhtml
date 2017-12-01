@@ -10,7 +10,11 @@
 		<h:inputText value="#{beanTeste.valor}" />
 		<h:commandButton action="#{beanTeste.salvar()}" value="enviar" />
 	</h:form>
-	#{beanTeste.valor}
+<h:dataTable value="#{beanTeste.nomes}" var="item">
+	<h:column>
+		#{item}
+	</h:column>
+</h:dataTable>
 
 </body> 
 </html>
