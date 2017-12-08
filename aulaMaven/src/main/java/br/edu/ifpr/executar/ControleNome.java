@@ -1,9 +1,6 @@
 package br.edu.ifpr.executar;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,12 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/controleNome")
 public class ControleNome extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    private List<String> nomes;
-    
-    
-    public ControleNome() {
-        nomes = new ArrayList<String>();
-    }
+	private String nomes="";
+   
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
@@ -29,13 +22,10 @@ public class ControleNome extends HttpServlet {
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String nome = request.getParameter("nome");
-		nomes.add(nome);
+		nomes = nomes + request.getParameter("nome")+"<br>";
 		
-		System.out.println("-*-*-*-- IMPRIMINDO A LISTA--*-*-*-*-");
-		for(String n : nomes){
-			System.out.println(n);
-		}
+		request.setAttribute("lista", nomes);
+		request.getRequestDispatcher("paginaNomes.jsp").forward(request, response);
 	}
 
 }

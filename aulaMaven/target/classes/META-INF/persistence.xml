@@ -4,6 +4,9 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 	<persistence-unit name="postgresqlPU" transaction-type="RESOURCE_LOCAL">
 		<class>br.edu.ifpr.entidades.Estado</class>
+		<class>br.edu.ifpr.entidades.Cliente</class>
+		<class>br.edu.ifpr.entidades.Conta</class>
+		<class>br.edu.ifpr.entidades.Movimento</class>
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/bancoAula" />
 			<property name="javax.persistence.jdbc.user" value="postgres" />

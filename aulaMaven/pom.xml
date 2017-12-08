@@ -6,7 +6,6 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
-
 	<build>
 		<plugins>
 			<!-- CONFIGURAR VERSÃO DO JAVA PARA 1.8 -->
@@ -35,6 +34,7 @@
 			<version>5.2.12.Final</version>
 			<scope>provided</scope>
 		</dependency>
+
 		<!-- servlet -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -42,24 +42,29 @@
 			<version>4.0.0</version>
 			<scope>provided</scope>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.jboss.spec.javax.faces/jboss-jsf-api_2.0_spec -->
+
+		<!-- JAVASERVER FACES -->
 		<dependency>
 			<groupId>org.jboss.spec.javax.faces</groupId>
-			<artifactId>jboss-jsf-api_2.0_spec</artifactId>
-			<version>1.0.0.Final</version>
+			<artifactId>jboss-jsf-api_2.2_spec</artifactId>
+			<version>2.2.13</version>
 			<scope>provided</scope>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/javax.enterprise/cdi-api -->
-		<!-- CDI API -->
+		<!-- cdi -->
 		<dependency>
-			<groupId>javax.enterprise</groupId>
-			<artifactId>cdi-api</artifactId>
-			<version>2.0</version>
+			<groupId>org.jboss.weld.servlet</groupId>
+			<artifactId>weld-servlet</artifactId>
+			<version>3.0.0.Alpha1</version>
 			<scope>provided</scope>
 		</dependency>
 
-
+		<!-- prime faces -->
+		<dependency>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>6.1</version>
+		</dependency>
 
 	</dependencies>
 </project>

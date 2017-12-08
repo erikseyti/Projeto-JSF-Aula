@@ -6,7 +6,7 @@ import javax.inject.Named;
 @Named
 @ApplicationScoped
 public class Empresa {
-	private String nome ="IFPR";
+	private String nome = "IFPR";
 	private String endereco = "Rua José";
 	public String getNome() {
 		return nome;
@@ -20,6 +20,4 @@ public class Empresa {
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
-	
-
 }
