@@ -14,11 +14,14 @@
 				<p:dataTable id="tabela" value="#{beanListCliente.lista}" var="cli">
 					<f:facet name="header">Lista de Cliente</f:facet>
 
-					<p:column headerText="nome" style="text-align:right">
+					<p:column headerText="id" style="text-align:right">
 				#{cli.id}
 			</p:column>
 					<p:column headerText="nome">
 				#{cli.nome}
+			</p:column>
+			<p:column headerText="cpf">
+				#{cli.cpf}
 			</p:column>
 					<p:column style="width:15%">
 						<p:commandButton action="#{beanListCliente.excluir()}"
