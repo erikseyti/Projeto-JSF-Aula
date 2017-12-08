@@ -19,6 +19,12 @@
 						<p:outputLabel value="Nome:" for="nome" />
 						<p:inputText id="nome" value="#{beanCliente.cliente.nome}" />
 					</h:panelGrid>
+					<h:panelGrid columns="2">
+						<p:outputLabel value="CPF:" for="cpf"/>
+						<p:inputText id="cpf" value="#{beanCliente.cliente.cpf}"/>
+					</h:panelGrid>
+					
+					
 					<p:commandButton action="#{beanCliente.savlar()}" value="salvar" icon="ui-icon-check" />
 				</h:form>
 			</p:panel>
@@ -27,4 +33,6 @@
 
 	</ui:composition>
 </body>
+
+
 </html>

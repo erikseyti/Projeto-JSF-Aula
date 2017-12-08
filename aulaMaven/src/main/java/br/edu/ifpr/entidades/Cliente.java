@@ -19,6 +19,15 @@ public class Cliente implements Serializable {
 	@GeneratedValue (strategy=GenerationType.AUTO)
 	private Integer id;
 	private String nome;
+	private String cpf;
+	
+	public String getCpf() {
+		return cpf;
+	}
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
 	private static final long serialVersionUID = 1L;
 
 	public Cliente() {
@@ -43,6 +52,7 @@ public class Cliente implements Serializable {
 		return this.nome.charAt(0);
 	}
 	
+	// Verifica se o id do cliente é um valor nulo, zero ou se é o mesmo valor do objeto passado pelo parametro
 	public boolean equals(Object obj){
 		Cliente clienteAcomparar = (Cliente) obj;
 		if(clienteAcomparar.getId() != null && clienteAcomparar.getId() != 0 && clienteAcomparar.getId() == this.id)

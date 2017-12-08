@@ -17,6 +17,8 @@ public class ServicoCliente implements Serializable{
 	@Inject
 	private DAOCliente dao;
 	
+	// Realiza a Ação de Salvar ou Alterar o objeto no BDD, caso o id seja nulo é um objeto novo (salvar)
+	// se o objeto já tiver id é uma alteração no BDD com o registro desse numero do id.
 	@Transacao
 	public void salvar(Cliente cliente){
 		
@@ -34,6 +36,7 @@ public class ServicoCliente implements Serializable{
 		}
 	}
 	
+	// Realiza uma Busca no BDD a partir do id, e exclui esse registro do BDD.
 	@Transacao
 	public boolean excluir(Integer id){
 		return dao.excluir(id);
